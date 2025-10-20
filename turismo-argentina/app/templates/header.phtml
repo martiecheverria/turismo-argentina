@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Turismo Argentino</title>
+    <base href="<?php echo BASE_URL; ?>">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home" class="logo">TurismoARG 🇦🇷</a>
+            <ul>
+                <li><a href="home">Inicio</a></li>
+                <li><a href="destinos">Destinos</a></li>
+                <li><a href="regiones">Regiones</a></li>
+                
+                <?php if (isset($_SESSION['USER_ID'])) { ?>
+                    <?php if ($_SESSION['USER_ROLE'] == 'admin') { ?>
+                        <li><a href="admin">Panel de Admin</a></li>
+                    <?php } ?>
+                    <li><a href="logout">Logout (<?php echo $_SESSION['USER_EMAIL']; ?>)</a></li>
+                <?php } else { ?>
+                    <li><a href="login">Login</a></li>
+                    <li><a href="register">Registrarse</a></li>
+                <?php } ?>
+            </ul>
+        </nav>
+    </header>
+    <main>

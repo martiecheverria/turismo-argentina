@@ -1,0 +1,485 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+    --light-color: #ffffff;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+main {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--light-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+h2 {
+    text-align: center;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1623351934089-a2927f8f94d1?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-color);
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.featured {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* --- Estilos para Destinos --- */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
+
+.destination-card {
+    background-color: var(--light-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-card-content {
+    padding: 1.5rem;
+}
+
+.destination-card-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.destination-card-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555; 
+    margin-bottom: 0;
+}
+
+/* --- Estilos para el Footer --- */
+.site-footer {
+    background-color: var(--secondary-color);
+    color: #bdc3c7; 
+    padding: 2.5rem 0 0 0;
+    margin-top: auto; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #4a6274;
+}
+
+.footer-about, .footer-social {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-about h3 {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.footer-social h3 {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.footer-social a {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block; 
+}
+
+.footer-social a:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+
+
+/* --- Estilos para el Login --- */
+.login-container {
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 2.5rem;
+    background: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.login-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.login-form button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #2980b9;
+}
+
+.error {
+    color: #c0392b;
+    background: #f2dede;
+    padding: 0.8rem;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* --- Estilos para el menú de filtros --- */
+
+.filter-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--light-color);
+    padding: 1rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 90%;
+}
+
+.filter-nav span {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.filter-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-nav a {
+    text-decoration: none;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.empty-destinations {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 3rem;
+    color: #7f8c8d;
+}
+
+/* --- Estilos para Regiones --- */
+
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.region-card {
+    background-color: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.region-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.region-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.region-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
+.region-card-content h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.region-card-content p {
+    flex-grow: 1; 
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.region-card .cta-button {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+
+/* Estilos para la lista de regiones */
+.region-list {
+    list-style: none;
+    padding: 0 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.region-list li a {
+    display: block;
+    background-color: var(--light-color);
+    color: var(--secondary-color);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.region-list li a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    color: var(--primary-color);
+}
+
+/* --- Estilos para la sección de información adicional --- */
+.info-section {
+    max-width: 900px;
+    margin: 4rem auto 2rem auto;
+    padding: 2rem;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.info-section h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.info-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-section li {
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.info-section li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* --- Estilos para la Página de Detalle de Destino --- */
+.destino-detail-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.destino-detail-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.destino-detail-content {
+    padding: 2rem;
+}
+
+.destino-detail-content h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.destino-detail-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.destination-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+table { width: 100%; border-collapse: collapse; margin-top: 2rem; background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #ecf0f1; }
+th { background-color: #f8f9fa; }
+td a { margin-right: 1rem; color: var(--primary-color); text-decoration: none; }
+form { display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 2rem 0; }
+.admin-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem; }
+.admin-section { background: #fdfdfd; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
