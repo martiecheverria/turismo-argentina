@@ -37,4 +37,30 @@ El sitio permite a cualquier visitante explorar los destinos y filtrarlos por re
 
  Usuario Administrador
 * **Usuario**: `admin@turismo.com`
+
 * **Contraseña**: `admin`
+
+ Despliegue y Uso
+
+### Requisitos
+* Un servidor web local (como XAMPP).
+* PHP 8 o superior.
+* MySQL / MariaDB.
+
+### Instalación
+1.  Clonar o descargar el repositorio en la carpeta `htdocs` de XAMPP.
+2.  Asegurarse de que los servicios de Apache y MySQL estén iniciados.
+3.  Crear un archivo `config.php` en la raíz del proyecto con las credenciales de su base de datos:
+    ```php
+    <?php
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'db_turismo');
+    define('DB_USER', 'root');
+    define('DB_PASS', ''); // Tu contraseña de MySQL
+    ?>
+    ```
+4.  Navegar a `http://localhost/turismo-argentina/` en su navegador. La aplicación detectará que la base de datos no existe y lo redirigirá al instalador.
+5.  El script de instalación (`install.php`) creará la base de datos `db_turismo`, las tablas, y cargará los datos iniciales automáticamente.
+
+### Usuario Administrador
+* **Usuario**: `webadmin
