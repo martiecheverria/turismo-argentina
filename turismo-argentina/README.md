@@ -62,5 +62,3 @@ El sitio permite a cualquier visitante explorar los destinos y filtrarlos por re
 4.  Navegar a `http://localhost/turismo-argentina/` en su navegador. La aplicación detectará que la base de datos no existe y lo redirigirá al instalador.
 5.  El script de instalación (`install.php`) creará la base de datos `db_turismo`, las tablas, y cargará los datos iniciales automáticamente.
 
-### Usuario Administrador
-* **Usuario**: `webadmin
